@@ -30,12 +30,23 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {  // Usa el nombre de la configuración de SonarQube en Jenkins
-                    sh """
+                    /*sh """
                         /opt/sonar-scanner/bin/sonar-scanner \
                             -Dsonar.projectKey=ci-cd-pipeline \
                             -Dsonar.host.url=http://34.82.231.134:9000 \
                             -Dsonar.login=sqp_62967d39d7beed11b3f737be37f979e82dc69331
-                    """
+                    """*/     /*  Ejecuta el sonar-scanner que está instalado en tu servidor. Este es el método estándar para realizar análisis de código con SonarQube.*/
+                    sh '''
+                        curl -u sqp_62967d39d7beed11b3f737be37f979e82dc69331: \
+                        -X POST \
+                        -F "projectKey=hola-mundo" \
+                        -F "projectName=Hola Mundo" \
+                        -F "projectVersion=1.0" \
+                        -F "sources=src/main/java" \
+                        -F "language=java" \
+                        -F "binaries=." \
+                        http://34.82.231.134:9000/api/alm/report
+                    '''
                 }
             }
         }
@@ -47,4 +58,7 @@ pipeline {
         }
     }
 }
+
+
+
 
