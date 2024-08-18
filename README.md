@@ -34,13 +34,13 @@ Voici quelques captures d'écran montrant les résultats de Jenkins et SonarQube
 
 ### Exemple de Code
 
-![Résultat Jenkins](src/main/resources/images/JenkinsPanel.png)
+![Résultat Jenkins](hola-mundo/src/main/resources/images/JenkinsPanel.png)
 
 ### Résultat de build sur Jenkins avec SonarQube Scanner
 
-![Résultat Jenkins (SonarQube Scanner)](src/main/resources/images/31_sonarScanner.png)
+![Résultat Jenkins (SonarQube Scanner)](hola-mundo/src/main/resources/images/31_sonarScanner.png)
 
 ### Résultat de build sur Jenkins avec POST sur SonarQube
 
-![Résultat Jenkins (SonarQube) POST 1](src/main/resources/images/32_POSTSonarqube_1.png)
-![Résultat Jenkins (SonarQube) POST 2](src/main/resources/images/32_POSTSonarqube_2.png)
+![Résultat Jenkins (SonarQube) POST 1](hola-mundo/src/main/resources/images/32_POSTSonarqube_1.png)
+![Résultat Jenkins (SonarQube) POST 2](hola-mundo/src/main/resources/images/32_POSTSonarqube_2.png)
